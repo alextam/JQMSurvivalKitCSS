@@ -91,21 +91,20 @@
 	border-radius: 0px !important;
 }
 
-a {
-	/* IPad Only fix for copy URL pops, try press and hold anything with a href in IOS */
-	/* you will know what i mean :) */
-	-webkit-touch-callout: none !important;
-}
-
 * { 
 	/* Prevents users from selecting text inside div, label and url */
-	-webkit-touch-callout:none;
+	-webkit-touch-callout:none !important;
+	-webkit-user-select:none !important;
+	-webkit-text-size-adjust: none; /* prevent webkit from resizing text to fit */
+	-khtml-user-select:none !important;
+	-moz-user-select:none !important;
+	-ms-user-select:none !important;
+	user-select:none !important;
+}
+
+*:not(input) { 
+	/* Fix IOS 6 tap and hold problem */
 	-webkit-user-select:none;
-	-khtml-user-select:none;
-	-moz-user-select:none;
-	-ms-user-select:none;
-	user-select:none;
-	-webkit-user-select:text;
 }
 
 .removeHL { 
