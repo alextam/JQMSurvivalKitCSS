@@ -91,7 +91,8 @@
 	border-radius: 0px !important;
 }
 
-* { 
+
+*:not(input,textarea) { 
 	/* Prevents users from selecting text inside div, label and url */
 	-webkit-touch-callout:none !important;
 	-webkit-user-select:none !important;
@@ -102,7 +103,7 @@
 	user-select:none !important;
 }
 
-*:not(input) { 
+*:not(input,textarea) { 
 	/* Fix IOS 6 tap and hold problem */
 	-webkit-user-select:none;
 }
